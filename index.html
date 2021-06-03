@@ -5,11 +5,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/996d4da3f6.js" crossorigin="anonymous"></script>
   <title>Basic Calculator</title>
 </head>
 <body>
 <div class="wrapper">
+  <header class="header">
+    <h1 class="header__title">Basic Calculator <i class="fa fa-calculator"></i></h1>
+    <h2 class="header__text">//Made By Bl4ky113</h2>
+  </header>
+  <main class="content">
+    <div class="calculator">
+      <div class="screen-wrapper">
+        <div id="screen_output" class="screen">
+          
+        </div>
+      </div>
+      <div class="buttons-wrapper">
+        <button class="buttons" value="1">
+          1
+        </button>
+        <button class="buttons" value="2">
+          2
+        </button>
+        <button class="buttons" value="3">
+          3
+        </button>
+        <button class="buttons buttons--operation" value="sum">
+          &plus;
+        </button>
+        <button class="buttons buttons--operation" value="min">
+          &minus;
+        </button>
+        <button class="buttons" value="4">
+          4
+        </button>
+        <button class="buttons" value="5">
+          5
+        </button>
+        <button class="buttons" value="6">
+          6
+        </button>
+        <button class="buttons buttons--operation" value="mult">
+          &times;
+        </button>
+        <button class="buttons buttons--operation" value="div">
+          &divide;
+        </button>
+        <button class="buttons" value="7">
+          7
+        </button>
+        <button class="buttons" value="8">
+          8
+        </button>
+        <button class="buttons" value="9">
+          9
+        </button>
+        <button class="buttons buttons--operation" value="rad">
+          &radic;
+        </button>
+        <button class="buttons buttons--operation" value="exp">
+          []&sup2;
+        </button>
+        <button class="buttons" value="0">
+          0
+        </button>
+        <button class="buttons" value=".">
+          .
+        </button>
+        <button id="btn_del" class="buttons buttons--delete" value="del">
+          DEL
+        </button>
+        <button id="btn_ac" class="buttons buttons--delete" value="ac">
+          AC
+        </button>
+        <button id="btn_solve" class="buttons buttons--operation" value="=">
+          &equals;
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
 
+  </footer>
 </div>
 <script src="./src/js/script.js"></script>
 </body>

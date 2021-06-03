@@ -1,3 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 16px;
   display: grid;
+  grid-template: auto 1fr auto/5% 1fr 5%;
+  grid-template-areas: "header  header  header" "clear_1 content clear_2" "footer  footer  footer";
+}
+
+.header {
+  padding: 1em 1.5em;
+  background-color: #333;
+  grid-area: header;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.header .header__title {
+  border-bottom: 0.1em solid #999;
+  padding-bottom: 0.15em;
+  color: #fff;
+  font: 600 2.75em/75% "Rubik", sans-serif;
+  text-align: center;
+}
+.header .header__text {
+  color: #999;
+  font: 200 1.25em "Inconsolata", monospace;
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template: repeat(1, 1fr)/5% 1fr 5%;
+}
+.content .calculator {
+  width: 65%;
+  margin: 0.5em auto;
+  border-radius: 1em;
+  padding: 0.25em;
+  background-color: #888;
+  grid-column: 2/3;
+  grid-row: span 1;
+  display: grid;
+  grid-template: 25vh 1fr/1fr;
+}
+.content .calculator .screen-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  border-right: 0.25em solid #666;
+  border-left: 0.25em solid #666;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  grid-column: span 1;
+  grid-row: 1/2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.content .calculator .screen-wrapper .screen {
+  min-width: 90%;
+  max-width: 90%;
+  height: 50%;
+  padding: 1rem;
+  border: 0.25rem outset rgba(14, 50, 1, 0.75);
+  background-color: rgba(15, 66, 3, 0.8);
+  color: white;
+  font: 400 1.5em/50% "Inconsolata", monospace;
+}
+.content .calculator .buttons-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background-color: #666;
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(5, 1fr);
+  grid-gap: 0.5em;
+}
+.content .calculator .buttons-wrapper .buttons {
+  border: 0.05rem outset #333;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0.25rem 0.25rem 0.05rem #333;
+  grid-column: span 1;
+  grid-row: span 1;
+  color: #000;
+  font: 500 2em/90% "Inconsolata", monospace;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content .calculator .buttons-wrapper .buttons:active {
+  box-shadow: none;
+}
+.content .calculator .buttons-wrapper .buttons--operation {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 2.75em;
+}
+.content .calculator .buttons-wrapper .buttons--delete {
+  background-color: rgba(255, 102, 68, 0.9);
+  font-weight: 800;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #111;
 }
