@@ -51,8 +51,7 @@ function addValue(obj) {
   if (obj.innerText == "[]²") value = "&sup2;"; // Add Value to Operations Arr
 
   if (Number.isInteger(parseInt(obj.value))) operationsArr.push(parseInt(obj.value));else operationsArr.push(obj.value);
-  console.log(operationsArr);
-  if (output.innerHTML == "error") output.innerHTML = "";
+  if (output.innerHTML == "error" || output.innerHTML == "undefined") output.innerHTML = "";
   output.innerHTML += value;
 }
 
